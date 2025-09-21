@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechStore - Преміум Технології</title>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo">🍎 TechStore</div>
+        <ul class="nav-links">
+          <li><a href="#home">Головна</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#products">Продукти</a></li>
+          <li><a href="#footer">Контакти</a></li>
+          <li>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+          </li>
+          <li>
+            <button class="cart-btn" onclick="toggleCart()">
+              🛒 Кошик
+              <span class="cart-count" id="cartCount">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Преміум Технології</h1>
+        <p>
+          Відкрийте для себе найкращі технологічні продукти з неперевершеною
+          якістю та інноваційним дизайном
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="gallery-container">
+          <div
+            class="gallery-slide active"
+            style="
+              background-image: url('/placeholder.svg?height=400&width=800');
+            "
+          >
+            <div class="gallery-text">Сучасні Технології</div>
+          </div>
+          <div
+            class="gallery-slide"
+            style="
+              background-image: url('/placeholder.svg?height=400&width=800');
+            "
+          >
+            <div class="gallery-text">Преміум Смартфони</div>
+          </div>
+          <div
+            class="gallery-slide"
+            style="
+              background-image: url('/placeholder.svg?height=400&width=800');
+            "
+          >
+            <div class="gallery-text">Бездротові Технології</div>
+          </div>
+          <div
+            class="gallery-slide"
+            style="
+              background-image: url('/placeholder.svg?height=400&width=800');
+            "
+          >
+            <div class="gallery-text">Розумний Дім</div>
+          </div>
+          <div
+            class="gallery-slide"
+            style="
+              background-image: url('/placeholder.svg?height=400&width=800');
+            "
+          >
+            <div class="gallery-text">Ігрові Технології</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products">
+      <div class="container">
+        <h2>Наші Продукти</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <div
+              class="product-image"
+              style="
+                background-image: url('/placeholder.svg?height=200&width=300');
+              "
+            ></div>
+            <h3>Преміум Смартфон</h3>
+            <p>
+              Найновіший флагманський смартфон з передовими технологіями та
+              елегантним дизайном
+            </p>
+            <div class="product-price">₴25,999</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('Преміум Смартфон', 25999, '/placeholder.svg?height=60&width=60')"
+            >
+              Додати в кошик
+            </button>
+          </div>
+
+          <div class="product-card">
+            <div
+              class="product-image"
+              style="
+                background-image: url('/placeholder.svg?height=200&width=300');
+              "
+            ></div>
+            <h3>Бездротові Навушники</h3>
+            <p>Високоякісні бездротові навушники з активним шумозаглушенням</p>
+            <div class="product-price">₴8,999</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('Бездротові Навушники', 8999, '/placeholder.svg?height=60&width=60')"
+            >
+              Додати в кошик
+            </button>
+          </div>
+
+          <div class="product-card">
+            <div
+              class="product-image"
+              style="
+                background-image: url('/placeholder.svg?height=200&width=300');
+              "
+            ></div>
+            <h3>Розумний Годинник</h3>
+            <p>Інноваційний розумний годинник для активного способу життя</p>
+            <div class="product-price">₴12,999</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('Розумний Годинник', 12999, '/placeholder.svg?height=60&width=60')"
+            >
+              Додати в кошик
+            </button>
+          </div>
+
+          <div class="product-card">
+            <div
+              class="product-image"
+              style="
+                background-image: url('/placeholder.svg?height=200&width=300');
+              "
+            ></div>
+            <h3>Ультрабук</h3>
+            <p>Потужний та легкий ноутбук для професійної роботи</p>
+            <div class="product-price">₴45,999</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('Ультрабук', 45999, '/placeholder.svg?height=60&width=60')"
+            >
+              Додати в кошик
+            </button>
+          </div>
+
+          <div class="product-card">
+            <div
+              class="product-image"
+              style="
+                background-image: url('/placeholder.svg?height=200&width=300');
+              "
+            ></div>
+            <h3>Планшет</h3>
+            <p>Універсальний планшет для творчості та розваг</p>
+            <div class="product-price">₴18,999</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('Планшет', 18999, '/placeholder.svg?height=60&width=60')"
+            >
+              Додати в кошик
+            </button>
+          </div>
+
+          <div class="product-card">
+            <div
+              class="product-image"
+              style="
+                background-image: url('/placeholder.svg?height=200&width=300');
+              "
+            ></div>
+            <h3>Розумна Колонка</h3>
+            <p>Інтелектуальна колонка з голосовим помічником</p>
+            <div class="product-price">₴6,999</div>
+            <button
+              class="add-to-cart"
+              onclick="addToCart('Розумна Колонка', 6999, '/placeholder.svg?height=60&width=60')"
+            >
+              Додати в кошик
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h3>Кошик</h3>
+        <button class="close-cart" onclick="toggleCart()">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p
+          style="
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 2rem;
+          "
+        >
+          Кошик порожній
+        </p>
+      </div>
+      <div class="cart-total">
+        <div class="total-price" id="totalPrice">Загалом: ₴0</div>
+        <button
+          class="checkout-btn"
+          onclick="showCheckout()"
+          id="checkoutBtn"
+          style="display: none"
+        >
+          Оформити замовлення
+        </button>
+
+        <div class="checkout-form" id="checkoutForm">
+          <h4 style="margin-bottom: 1rem; color: var(--text-primary)">
+            Контактна інформація
+          </h4>
+          <div class="form-group">
+            <label for="customerName">Ім'я:</label>
+            <input type="text" id="customerName" required />
+          </div>
+          <div class="form-group">
+            <label for="customerEmail">Email:</label>
+            <input type="email" id="customerEmail" required />
+          </div>
+          <button class="checkout-btn" onclick="completeOrder()">
+            Підтвердити замовлення
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>TechStore</h3>
+            <p>
+              Ваш надійний партнер у світі технологій. Ми пропонуємо тільки
+              найкращі продукти від провідних брендів.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Контакти</h3>
+            <p>📧 info@techstore.ua</p>
+            <p>📞 +380 44 123 45 67</p>
+            <p>📍 Київ, вул. Хрещатик, 1</p>
+          </div>
+          <div class="footer-section">
+            <h3>Корисні посилання</h3>
+            <p><a href="#products">Каталог</a></p>
+            <p><a href="#gallery">Галерея</a></p>
+            <p><a href="#home">Про нас</a></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 TechStore. Всі права захищені.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
